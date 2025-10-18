@@ -63,3 +63,23 @@
     border-radius: 6px;
     text-align: center;
 }
+
+.map-wrapper{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-frame{
+    width: 100%;
+    max-width: 720px;
+    height: 260px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.map-link{ margin-top: 8px }
+.map-link a{ color: #06357a; text-decoration: underline }
+
+.weather-info p span{ display: inline-block; min-width: 120px }

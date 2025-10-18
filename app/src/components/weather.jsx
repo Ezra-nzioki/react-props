@@ -83,6 +83,23 @@ export const Weather = () => {
                     <p>
                         condition: <span>{data.weather?.[0]?.description ?? 'N/A'}</span>
                     </p>
+                        <p>
+                            wind: <span>{data.wind?.speed ?? 'N/A'} m/s ({data.wind?.speed ? (Math.round((data.wind.speed*3.6)*10)/10) : 'N/A'} km/h)</span>
+                        </p>
+
+                        {data.coord && (
+                            <div className="map-wrapper">
+                                <iframe
+                                    title="mini-map"
+                                    className="map-frame"
+                                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${data.coord.lon-0.5}%2C${data.coord.lat-0.5}%2C${data.coord.lon+0.5}%2C${data.coord.lat+0.5}&layer=mapnik&marker=${data.coord.lat}%2C${data.coord.lon}`}
+                                    loading="lazy"
+                                ></iframe>
+                                <div className="map-link">
+                                    <a href={`https://www.openstreetmap.org/?mlat=${data.coord.lat}&mlon=${data.coord.lon}#map=10/${data.coord.lat}/${data.coord.lon}`} target="_blank" rel="noreferrer">Open in OpenStreetMap</a>
+                                </div>
+                            </div>
+                        )}
                 </div>
             )}
         </div>
