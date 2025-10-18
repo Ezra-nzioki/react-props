@@ -1,0 +1,49 @@
+/* Fixed header styles */
+.app-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: linear-gradient(90deg, #0f2a36, #1b5770);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.app-header .container{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header .brand{
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+}
+
+.app-header .nav a{
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+}
+
+.app-header .nav a:hover{
+  color: #cceeff;
+}
+
+/* Responsive: collapse spacing on small screens */
+@media (max-width: 480px){
+  .app-header .nav a{
+    margin-left: 12px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,19 @@
+body{
+  background-color: rgb(8, 88, 62);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+button{
+  background-color: rgb(29, 115, 190);
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+}
+button:hover{
+  background-color: rgb(108, 139, 167);
+  scale:1.2;
+  
+}

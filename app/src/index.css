@@ -1,0 +1,11 @@
+/* Make sizing predictable */
+*,*::before,*::after{box-sizing:border-box}
+
+body{
+  background-color: #1B3C53;
+  margin: 0;
+  padding-top: 64px; /* same as header height to avoid content underlap */
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
